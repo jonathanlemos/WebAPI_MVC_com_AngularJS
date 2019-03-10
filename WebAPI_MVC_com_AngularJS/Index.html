@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">06</script>
+    <script>
+        function testeController($scope) {
+            $scope.Funcionarios = [
+                { id: 1, nome: "Sergio" },
+                { id: 1, nome: "jonathan" },
+                { id: 1, nome: "Lemos" },
+                { id: 1, nome: "Santos" },
+                { id: 1, nome: "Sergio jonathan" },
+            ];
+        }
+    </script>
+
+</head>
+<body>
+    <div ng-controller="testeController">
+        <p><span>Funcionários dos mês</span></p>
+        <input type="text" ng-model="consultarNome" name="name" value="" />
+        <ul ng-repeat="funcionario in Funcionarios | filter:consultarNome">
+            <li>Id: {{funcionario.id}} - Nome: {{funcionario.nome}}</li>
+        </ul>
+</div>
+</body>
+</html>
