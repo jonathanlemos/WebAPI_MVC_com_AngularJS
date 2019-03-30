@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
+    <Content Include="js\Modulos\Funcionarios.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
